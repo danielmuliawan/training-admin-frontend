@@ -1,6 +1,6 @@
 <div *ngIf="person">
     <div>
-        <h1>Profile Form </h1>
+        <h1>User Detail</h1>
         <p>ID: {{person.ID}}</p>
         <p>Name: {{person.Name}}</p>
         <p>Email: {{person.Email}}</p>
@@ -16,4 +16,5 @@
           <input type = "text" id = "email" [(ngModel)] = "person.Email" name = "email">
        </div>
     </form>
+    <button (click)="goBack()">Back</button>
 </div>

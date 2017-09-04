@@ -1,4 +1,6 @@
-h1 {
+@import "../../node_modules/~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
@@ -7,7 +9,55 @@ p {
   color: purple;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
-}
+} */
 table, th, td {
   border: 1px solid #000000;
+}
+
+.example-sidenav-fab-container {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}
+
+.example-sidenav-fab-container md-sidenav {
+  max-width: 200px;
+}
+
+.example-sidenav-fab-container .mat-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  display: flex;
+  overflow: visible;
+}
+
+.example-scrolling-content {
+  overflow: auto;
+  /* min-width: 1vw; */
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.example-scrolling-content2 {
+  overflow: auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.example-scrolling-content li {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin: 0;
+  padding: 0;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  border-color: rgba(0,0,0,.06);
+  color: rgba(0,0,0,.54);
+  list-style-type: none;
 }

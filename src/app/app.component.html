@@ -1,2 +1,43 @@
-<h1>Edit User Data</h1>
-<user-list>Here is list</user-list>
+<md-grid-list cols="6" rowHeight="56px">
+    <md-grid-tile [colspan]="6"[rowspan]="1">
+        <md-toolbar style="background-color:#3F51B5; color:#EFF3F8;">
+            Spiderman Team
+        </md-toolbar>
+    </md-grid-tile>
+
+
+    <md-grid-tile [colspan]="6"[rowspan]="10.64">
+
+
+
+            <md-sidenav-container class="example-sidenav-fab-container">
+                <md-sidenav #sidenav mode="side" opened="true">
+                    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+                    <md-icon>add</md-icon>
+                    </button>
+                    <div class="example-scrolling-content">
+                        <nav>
+                            <ul>
+                                <li><a routerLink="/dashboard">Dashboard</a></li>
+                                <li><a routerLink="/users">Users</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </md-sidenav>
+                
+                <div class="example-scrolling-content">
+                    <router-outlet></router-outlet>
+                    <md-toolbar class="md-toolbar-footer" style="background-color:#3f51b5; color:#FFFFFF;">
+                        <div style="display:grid; text-align: center;">
+                            <p style="font-size:12px;">Copyrighy &copy; 2017</p>
+                        </div>
+                    </md-toolbar>
+                </div>
+            </md-sidenav-container>
+
+
+    </md-grid-tile>
+    
+</md-grid-list>
+
+

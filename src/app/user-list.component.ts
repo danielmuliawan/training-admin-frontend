@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Person } from './person';
 import { UserService } from './user.service';
 
@@ -8,11 +8,14 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css']
 
 })
-export class UserListComponent  { 
-    person:any[];
+export class UserListComponent implements OnInit { 
+    person = [];
 
-    constructor (private UserService: UserService){
-      this.person = UserService.getUsers();
+    constructor (private UserService: UserService){ }
+
+    ngOnInit(): void {
+      this.UserService.getUsers()
+        .then(person => this.person = person);
     }
 
     selectedPerson: Person;
