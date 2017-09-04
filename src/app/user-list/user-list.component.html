@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card">
+              <div class="header">
+                  <h4 class="title">User List</h4>
+                  <p class="category">List of User(s)</p>
+              </div>
+              <div class="content table-responsive table-full-width">
+                  <table class="table table-striped">
+                      <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Option</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let p of person">
+                              <td>{{p.id}}</td>
+                              <td>{{p.Name}}</td>
+                              <td>{{p.Email}}</td>
+                              <td><button class="btn btn-default btn-info" (click)="onSelected(p)" [routerLink]="['/users', p.id]">Detail</button></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
