@@ -1,20 +1,18 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';  
-import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { UserListComponent }  from './user-list.component';
 import { UserDetailComponent } from './user-detail.component';
+import { UserService } from './user.service';
 
-const appRoutes: Routes = [
-  { path: 'detail/:id', component: UserDetailComponent },
-];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes) ],
+  imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent,
                  UserListComponent, UserDetailComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers:    [ UserService ]
 })
 export class AppModule { }

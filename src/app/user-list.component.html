@@ -7,13 +7,13 @@
             <th>Action</th>
         </tr>
     </thead>
-    <tbody *ngFor="let person of persons"> 
+    <tbody *ngFor="let p of person"> 
         <tr>
-           <td>{{person.ID}}</td> 
-           <td>{{person.Name}}</td>
-           <td>{{person.Email}}</td>
-           <td><button (click)="onSelected(person)">edit</button></td>
+           <td>{{p.ID}}</td> 
+           <td>{{p.Name}}</td>
+           <td>{{p.Email}}</td>
+           <td><button (click)="onSelected(p)">edit</button></td>
         </tr> 
     </tbody>
-    </table>
-    <user-detail [person]="selectedPerson"></user-detail>
+</table>
+<user-detail [person]="selectedPerson"></user-detail>
