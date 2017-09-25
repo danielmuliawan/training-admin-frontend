@@ -21,10 +21,10 @@ export class UserService{
             .catch(this.handleError);
     }
 
-    getUsers(): Promise<any[]> {
+    getUsers(): Promise<Person> {
         return this.http.get(this.usersUrl)
             .toPromise()
-            .then(response => response.json().data as any[])
+            .then(response => response.json().data as Person)
             .catch(this.handleError);
     }
 

@@ -9,7 +9,7 @@ import { UserService } from './../user/user.service';
 
 })
 export class UserListComponent implements OnInit { 
-    person = [];
+    person : Person;
 
     constructor (private UserService: UserService){ }
 
